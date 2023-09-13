@@ -1,0 +1,290 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: cursive;
+}
+body {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  width: 100%;
+  border-bottom: 1px solid black;
+  background: rgb(6, 180, 180, 0.3);
+  z-index: 1;
+}
+
+.logo {
+  font-size: 25px;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.sticky + #home {
+  padding-top: 70px;
+}
+
+nav ul {
+  display: flex;
+  gap: 20px;
+}
+
+nav ul li {
+  list-style-type: none;
+}
+nav ul a {
+  text-decoration: none;
+  color: black;
+  font-size: 20px;
+  font-weight: 800;
+}
+
+nav ul li:hover {
+  scale: 1.04;
+  transition: 1s;
+  border-bottom: 5px solid black;
+  border-radius: 20%;
+}
+
+
+#home {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.home-text {
+  width: 50%;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.home-text p {
+  word-wrap: break-word;
+  font-size: 20px;
+  font-weight: 600;
+}
+.home-text h1 {
+  word-wrap: wrap;
+  font-size: 40px;
+  font-weight: 900;
+}
+
+.home-text h3 {
+  word-wrap: wrap;
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.home-text button {
+  font-size: 25px;
+  width: max-content;
+  font-weight: 500;
+  padding: 5px;
+  border-radius: 20px;
+  background: rgb(6, 180, 180);
+}
+.home-text button:hover {
+  border: 2px solid rgb(6, 180, 180);
+  color: rgb(6, 180, 180);
+  background: transparent;
+  scale: 1.02;
+  transition: 1s;
+}
+
+.home-img {
+  width: 50%;
+  height: 80%;
+}
+
+.home-img img {
+  width: 100%;
+  height: 100%;
+}
+span {
+  color: rgb(6, 180, 180);
+}
+
+#services {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+#services h2 {
+  text-align: center;
+  padding: 20px;
+  font-size: 30px;
+}
+
+.serv {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  text-align: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.grid_item {
+  width: 30%;
+  border: 1px solid black;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 20px;
+}
+
+.grid_item:hover {
+  scale: 1.04;
+  transition: 2s;
+}
+
+.grid_item img {
+  width: 100%;
+  border-radius: 20px;
+}
+
+#contact {
+  width: 100%;
+  text-align: center;
+}
+
+#contact h2 {
+  text-align: center;
+  padding: 20px;
+  font-size: 30px;
+}
+
+.contactus {
+  display: flex;
+  text-align: center;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.contact-img {
+  width: 50%;
+  text-align: center;
+}
+.contact-img img {
+  width: 100%;
+  text-align: center;
+}
+
+.contact-form {
+  width: 50%;
+  text-align: center;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+textarea {
+  width: 100%; /* Full width */
+  padding: 12px; /* Some padding */
+  border: 1px solid #ccc; /* Gray border */
+  border-radius: 4px; /* Rounded borders */
+  box-sizing: border-box; /* Make sure that padding and width stays in place */
+  margin-top: 6px; /* Add a top margin */
+  margin-bottom: 16px; /* Bottom margin */
+  resize: vertical; /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+
+/* Style the submit button with a specific background color etc */
+input[type="submit"] {
+  background-color: rgb(6, 180, 180);
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* When moving the mouse over the submit button, add a darker green color */
+input[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+footer {
+  background-color: rgb(6, 180, 180);
+  padding: 10px;
+  text-align: center;
+  color: #fff;
+}
+
+@media screen and (max-width: 703px) {
+  #home {
+    flex-direction: column;
+    margin-top: 20px;
+  }
+
+  .home.text {
+    width: 100%;
+  }
+
+  .home-text h1 {
+    font-size: 28px;
+  }
+  .home-text h3 {
+    font-size: 24px;
+  }
+  .home-text button {
+    font-size: 20px;
+  }
+
+  .home-text p {
+    font-size: 18px;
+    word-wrap: break-word;
+  }
+
+  .home-img {
+    width: 100%;
+  }
+
+  .serv {
+    flex-direction: column;
+  }
+
+  .grid_item {
+    width: 95%;
+  }
+  .contactus {
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .contact-img {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .contact-form {
+    width: 100%;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+  }
+  .logo {
+    font-size: 14px;
+  }
+  ul li a {
+    font-size: 15px;
+  }
+}
